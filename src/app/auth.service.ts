@@ -49,7 +49,7 @@ export class AuthService {
       ),
       switchMap((sig) =>
         this.http.post<VerifyResponse>(
-          'https://toornamentauthapi.azurewebsites.net/api/validateauth',
+          'https://toornamentapiauth.azurewebsites.net/api/validateAuth',
           { address: ethereum.selectedAddress, signature: sig }
         )
       ),
