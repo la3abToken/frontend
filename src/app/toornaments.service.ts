@@ -6,7 +6,7 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { Toornament } from './toornaments';
+import { Tournament } from './toornaments';
 
 @Injectable({
   providedIn: 'root',
@@ -28,9 +28,9 @@ export class ToornamentService {
     return throwError(errorMessage);
   }
 
-  public sendGetRequest(): Observable<HttpResponse<Toornament[]>> {
+  public sendGetRequest(): Observable<HttpResponse<Tournament[]>> {
     return this.httpClient
-      .get<Toornament[]>(this.REST_API_SERVER, { observe: 'response' })
+      .get<Tournament[]>(this.REST_API_SERVER, { observe: 'response' })
       .pipe(retry(3), catchError(this.handleError));
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy,ViewChild,ElementRef  } from '@angular/cor
 import { ToornamentService } from '../toornaments.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { Toornament } from '../toornaments';
+import { Tournament } from '../toornaments';
 import { User } from '../user';
 
 import { HttpResponse } from '@angular/common/http';
@@ -20,7 +20,7 @@ export class ToornamentListComponent implements OnInit {
   @ViewChild('closeModal') closeModal: ElementRef | null = null;
   @ViewChild('errorModal') public errorModal:ModalDirective | null = null;
 
-  toornaments: Toornament[] | null = [];
+  tournaments: Tournament[] | null = [];
   user: User | null = null;
   isError: boolean = false;
   session = localStorage.getItem("access_token");
@@ -34,9 +34,9 @@ export class ToornamentListComponent implements OnInit {
     this.dataService
       .sendGetRequest()
       .pipe(takeUntil(this.destroy$))
-      .subscribe((res: HttpResponse<Toornament[]>) => {
+      .subscribe((res: HttpResponse<Tournament[]>) => {
         console.log(res);
-        this.toornaments = res.body;
+        this.tournaments = res.body;
       });
   }
   ngOnDestroy() {

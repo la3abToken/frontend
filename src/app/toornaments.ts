@@ -1,6 +1,6 @@
-export interface Toornament {
+export interface Tournament {
   id: number;
-  toornamentName: string;
-  toornamentDescription: number;
-  toornamentDate: Date;
+  tournamentName: string;
+  tournamentDescription: number;
+  tournamentDate: Date;
 }

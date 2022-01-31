@@ -183,18 +183,18 @@
 <div class="container">
     <div class="row vertical-gap">
         <div class="col-lg-8">
-          <div *ngIf="toornaments?.length === 0">
+          <div *ngIf="tournaments?.length === 0">
             <div class="nk-info-box text-info">
               <div class="nk-info-box-icon">
                   <i class="ion-information"></i>
               </div>
-              <h3>No toornament available!</h3>
-              <em>No toornament is available for now, please come back later ...</em>
+              <h3>No tournament available!</h3>
+              <em>No tournament is available for now, please come back later ...</em>
           </div>
           </div>
 
             <!-- START: Now Playing -->
-            <div *ngFor="let toornament of toornaments">
+            <div *ngFor="let tournament of tournaments">
             <div class="nk-match" >
                 <div class="nk-match-team-left">
                     <a href="#">
@@ -202,14 +202,14 @@
                             <img src="/assets/images/team-3.jpg" alt="">
                         </span>
                         <span class="nk-match-team-name">
-                          {{ toornament.toornamentName }}
+                          {{ tournament.tournamentName }}
                         </span>
                     </a>
                 </div>
                 <div class="nk-match-status">
                     <a href="#">
-                        <span class="nk-match-status-vs">Toornament Date</span>
-                        <span class="nk-match-status-date">{{ toornament.toornamentDate }}</span>
+                        <span class="nk-match-status-vs">tournament Date</span>
+                        <span class="nk-match-status-date">{{ tournament.tournamentDate }}</span>
                         <span class="nk-match-score bg-dark-1">UP COMING</span>
                     </a>
                 </div>
@@ -218,8 +218,8 @@
                 </div>
             </div>
             <div class="nk-info-box">
-              <h3 class="h4">Toornament Description</h3>
-              <p>{{ toornament.toornamentDescription }}</p>
+              <h3 class="h4">tournament Description</h3>
+              <p>{{ tournament.tournamentDescription }}</p>
               <span class="h5">Share Tournament:</span>
 
               <ul class="nk-social-links-2">
@@ -242,7 +242,7 @@
             
             <!-- START: Latest Matches -->
             <div class="nk-gap-2"></div>
-            <h3 class="nk-decorated-h-2"><span><span class="text-main-1">Latest</span> Toornaments</span></h3>
+            <h3 class="nk-decorated-h-2"><span><span class="text-main-1">Latest</span> tournaments</span></h3>
             <div class="nk-gap"></div>
             <div class="nk-match">
                 <div class="nk-match-team-left">
@@ -257,7 +257,7 @@
                 </div>
                 <div class="nk-match-status">
                     <a href="#">
-                        <span class="nk-match-status-vs">Toornament Date</span>
+                        <span class="nk-match-status-vs">tournament Date</span>
                         <span class="nk-match-status-date">Apr 28, 2018 8:00 pm</span>
                         <span class="nk-match-score bg-dark-1">Finished</span>
                     </a>
