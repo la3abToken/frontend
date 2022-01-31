@@ -13,7 +13,7 @@ import { Toornament } from './toornaments';
 })
 export class ToornamentService {
   private REST_API_SERVER =
-    'https://toornamentapi.azurewebsites.net/api/getToornament';
+    'https://tournamentapi.azurewebsites.net/api/getTournament';
 
   constructor(private httpClient: HttpClient) {}
 

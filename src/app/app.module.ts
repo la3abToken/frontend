@@ -9,6 +9,7 @@ import { HTTP_INTERCEPTORS,HttpClientModule } from '@angular/common/http';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { LoadingScreenInterceptor } from './loading.interceptors';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { TeamsComponent } from './components/teams/teams.component';
 
 
 @NgModule({
@@ -18,8 +19,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ModalModule,
     ReactiveFormsModule,
     RouterModule.forRoot([{ path: '', component: ToornamentListComponent }]),
+    
   ],
-  declarations: [AppComponent,  ToornamentListComponent,LoadingScreenComponent],
+  declarations: [AppComponent,  ToornamentListComponent,LoadingScreenComponent, TeamsComponent],
  /* providers: [
     {
       provide: HTTP_INTERCEPTORS,
